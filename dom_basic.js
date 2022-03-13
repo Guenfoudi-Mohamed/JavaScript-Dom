@@ -131,7 +131,7 @@ btnStar.addEventListener('click', function(){
 }); 
 btnPause.addEventListener('click', function(){
     myDiv.removeEventListener('mousemove',mouseMove);
-    myDiv.addEventListener('mousemove',function(){
+    myDiv.addEventListener('mousemove',function(){                //hna lold methodh drnalha delete, wdrna method wkhlina value constant 
         demo.textContent = result;
     });
 });
