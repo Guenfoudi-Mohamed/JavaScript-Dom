@@ -107,4 +107,36 @@ myDiv.addEventListener('mouseout',function(){        //addEventListener() ila br
     demo.textContent = '';
 });
 
+//up_date
+
+const myDiv = document.querySelector('body div.myDiv');
+const btns = myDiv.querySelectorAll('div.myDiv button');   
+const demo = document.querySelector('body div.myDiv + p.demo');   
+const btnStar = btns[0];
+const btnPause = btns[1];
+let result = '';
+for(let i = 0;i<btns.length;i++){
+    btns[i].style.setProperty(`cursor`,`pointer`);  //style for buttons
+};
+window.addEventListener('load',function(){
+    myDiv.removeEventListener('mousemove',mouseMove);
+});
+function mouseMove(){
+    result  = (Math.round(Math.random() * 100));
+    demo.textContent = result;
+};
+myDiv.addEventListener('mousemove',mouseMove);
+btnStar.addEventListener('click', function(){
+    myDiv.addEventListener('mousemove',mouseMove);
+}); 
+btnPause.addEventListener('click', function(){
+    myDiv.removeEventListener('mousemove',mouseMove);
+    myDiv.addEventListener('mousemove',function(){
+        demo.textContent = result;
+    });
+});
+myDiv.addEventListener('mouseout', function(){                  //addEventListener() ila brina ga3 les methods tkhdmo en meme temps maxi bha onclick(),...
+    demo.textContent = '';
+}); 
+
 /*******************/   
