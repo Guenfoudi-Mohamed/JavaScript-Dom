@@ -1,3 +1,9 @@
+                                            // exercice Convert US Dollars to Moroccan Dirhams 
+    //html
+// <input type="text" class="dollar" placeholder="United States Dollar" min="0" style="width:250px;margin-top:30px;" maxlength="5" >
+// <input type="text" class="mad" placeholder="Moroccan Dirham" min="0" style="width:250px;" maxlength="5" >
+// <div class="demo"><div>
+    
 const dollar = document.querySelector('body input.dollar');
     const mad = document.querySelector('body input.mad');
     const demo = document.querySelector('body div.demo');
@@ -64,3 +70,4 @@ const dollar = document.querySelector('body input.dollar');
         dollar.value = '';
         mad.value = '';
     });
+/****************************************************/
